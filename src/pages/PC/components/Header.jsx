@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Modal, Form } from 'react-bootstrap';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from '../../../components/Button';
 
 const S = {
 	Wrapper: styled.div`
@@ -110,7 +110,15 @@ const Header = (props) => {
 							key={item}
 							isScroll={isScroll}
 							onClick={() => {
-								window.scrollTo(index, 0);
+								if (index === 1) {
+									window.scrollTo(700, 700);
+								} else if (index === 2) {
+									window.scrollTo(1700, 1700);
+								} else if (index === 3) {
+									window.scrollTo(2900, 2900);
+								} else {
+									window.scrollTo(0, 0);
+								}
 							}}
 						>
 							{item}

@@ -9,12 +9,12 @@ const S = {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 120px 0;
+		padding: 120px 30px;
 		background-color: ${(props) => props.theme.palette.background};
 	`,
 	Wrapper: styled.div`
 		width: 100%;
-		max-width: 1180px;
+		max-width: 1023px;
 		margin: auto;
 		display: flex;
 		flex-direction: column;
@@ -40,20 +40,23 @@ const S = {
 	List: styled.ul`
 		width: 100%;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		margin-bottom: 4rem;
 	`,
 	ListItem: styled.li`
-		width: 380px;
+		width: 100%;
+		height: 380px;
 		box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.03);
 		border-radius: 0.5rem;
+		display: flex;
+		flex-direction: row;
 		background-color: ${(props) => props.theme.palette.white};
+		margin-bottom: 4rem;
 	`,
 	ItemImage: styled.div`
 		width: 100%;
-		height: 380px;
-		border-radius: 0.5rem 0.5rem 0 0;
+		height: 100%;
+		border-radius: ${(props) => props.index};
 		background: no-repeat center/contain url(${(props) => props.image});
 		background-color: ${(props) => props.theme.palette.gray};
 	`,
@@ -111,11 +114,10 @@ const WORKS_ITEMS = [
 
 const Works = () => {
 	const animatedItem = {
-		0: useScrollFadeIn('left', 1, 0),
-		1: useScrollFadeIn('left', 1, 0.2),
-		2: useScrollFadeIn('left', 1, 0.3)
+		0: useScrollFadeIn('up', 1, 0),
+		1: useScrollFadeIn('up', 1, 0.2),
+		2: useScrollFadeIn('up', 1, 0.3)
 	};
-	const [ Test, setTest ] = React.useState([ WORKS_ITEMS ]);
 
 	return (
 		<S.Contain>
@@ -126,17 +128,13 @@ const Works = () => {
 					<br />
 					프로젝트
 				</S.Title>
-				{/*<S.Description>
-					현재 개발한 프로젝트입니다.
-					<br />
-					개발에 참가한 프로젝트
-        </S.Description>*/}
-				{Test.map((val, ind) => {
-					return (
-						<S.List key={ind}>
-							{val.map((item, index) => (
+
+				<S.List>
+					{WORKS_ITEMS.map((item, index) => {
+						if (index % 2 === 0) {
+							return (
 								<S.ListItem key={item.title} {...animatedItem[index]}>
-									<S.ItemImage image={item.image} />
+									<S.ItemImage image={item.image} index={'0.5rem 0 0 0.5rem'} />
 									<S.TextContainer>
 										<S.ItemTitle>{item.title}</S.ItemTitle>
 										<S.ItemLabel style={{ marginBottom: 5 }}>{item.label}</S.ItemLabel>
@@ -145,10 +143,23 @@ const Works = () => {
 										<S.TextButton>Read more</S.TextButton>
 									</S.TextContainer>
 								</S.ListItem>
-							))}
-						</S.List>
-					);
-				})}
+							);
+						} else {
+							return (
+								<S.ListItem key={item.title} {...animatedItem[index]}>
+									<S.TextContainer>
+										<S.ItemTitle>{item.title}</S.ItemTitle>
+										<S.ItemLabel style={{ marginBottom: 5 }}>{item.label}</S.ItemLabel>
+										<S.ItemLabel>{item.label2}</S.ItemLabel>
+										<S.ItemDesciption>{item.description}</S.ItemDesciption>
+										<S.TextButton>Read more</S.TextButton>
+									</S.TextContainer>
+									<S.ItemImage image={item.image} index={'0 0.5rem 0.5rem 0 '} />
+								</S.ListItem>
+							);
+						}
+					})}
+				</S.List>
 
 				{/*<Button fill="outline" onClick={()=>setTest(Test.concat([WORKS_ITEMS]))}>More Works</Button>*/}
 			</S.Wrapper>

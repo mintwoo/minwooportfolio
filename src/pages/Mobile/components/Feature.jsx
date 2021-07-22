@@ -9,24 +9,21 @@ const S = {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 120px 0;
 		background-color: ${(props) => props.theme.palette.background};
 	`,
 	Wrapper: styled.section`
-		padding 100px;
+		padding: 50px;
 		width: 100%;
-		max-width: 1180px;
+		max-width: 767px;
 		margin: auto;
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		flex-direction: column;
 		background-color: ${(props) => props.theme.palette.background};
 	`,
 	TextWrapper: styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		width: 580px;
 	`,
 	Label: styled.p`
 		display: inline-block;
@@ -49,10 +46,7 @@ const S = {
 		color: ${(props) => props.theme.palette.black};
 		margin-bottom: 2rem;
 	`,
-	List: styled.ul`
-		width: 400px;
-		margin-bottom: 2rem;
-	`,
+	List: styled.ul`margin-bottom: 2rem;`,
 	ListItem: styled.p`
 		${(props) => props.theme.typography.description};
 		padding: 1rem 1rem 1rem 0;
@@ -68,14 +62,13 @@ const S = {
 		cursor: pointer;
 	`,
 	Image: styled.div`
-		width: 580px;
-		height: 580px;
+		width: 100%;
+		height: 300px;
+		margin-bottom: 50px;
 		background: no-repeat center/cover
 			url(https://firebasestorage.googleapis.com/v0/b/portfolio-b7e94.appspot.com/o/profile.jpg?alt=media&token=5964cc18-9251-40b6-986c-36e3731b5143);
 	`
 };
-
-const FEAURE_ITEMS = [ '더프레샵 : 2021.04.26 ~' ];
 
 const Feature = (props) => {
 	const { data } = props;
@@ -84,6 +77,7 @@ const Feature = (props) => {
 	return (
 		<S.Contain>
 			<S.Wrapper>
+				<S.Image {...animatedImage} />
 				<S.TextWrapper>
 					<S.Label>Profile</S.Label>
 					<S.Title>
@@ -104,7 +98,7 @@ const Feature = (props) => {
 					</S.Description>
 					<S.SubTitle>경력</S.SubTitle>
 					<S.List>
-						{FEAURE_ITEMS.map((item, index) => (
+						{data.profile.list.map((item, index) => (
 							<S.ListItem key={item}>
 								<span>•</span> {item}
 							</S.ListItem>
@@ -112,7 +106,6 @@ const Feature = (props) => {
 					</S.List>
 					{/*<S.TextButton>Read more about our serives</S.TextButton>*/}
 				</S.TextWrapper>
-				<S.Image {...animatedImage} />
 			</S.Wrapper>
 		</S.Contain>
 	);

@@ -5,9 +5,9 @@ import { useScrollFadeIn, useScrollCount } from '../../../hooks';
 const S = {
 	Wrapper: styled.section`
 		width: 100%;
-		max-width: 1180px;
+		max-width: 767px;
 		margin: auto;
-		padding: 120px 0;
+		padding: 120px 30px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -37,7 +37,7 @@ const S = {
 		margin-bottom: 20px;
 	`,
 	ItemBox: styled.li`
-		width: 380px;
+		flex: 1;
 		padding: 3rem 2rem;
 		text-align: center;
 		background-color: ${(props) => props.theme.palette.white};
@@ -47,14 +47,16 @@ const S = {
 		border-radius: 0.5rem;
 	`,
 	ItemTitle: styled.h3`
-		${(props) => props.theme.typography.heading};
+		font-family: "Gelasio", serif;
+		font-size: 1rem;
+		font-weight: 500;
 		color: ${(props) => props.theme.palette.black};
 		margin-bottom: 1rem;
 	`,
 	Number: styled.span`
 		${(props) => props.theme.typography.subtitle};
 		color: ${(props) => props.theme.palette.secondary};
-		font-size: 3rem;
+		font-size: 1rem;
 		margin-bottom: 1rem;
 	`
 };
@@ -62,7 +64,6 @@ const S = {
 const SERVICES_ITEMS = [ [ 'HTML', 'CSS', 'React' ], [ 'ReactNative', 'Node.js', 'JavaScript' ] ];
 
 const Services = (props) => {
-	const { data } = props;
 	const animatedItem = {
 		0: useScrollFadeIn('up', 1, 0),
 		1: useScrollFadeIn('up', 1, 0.2),

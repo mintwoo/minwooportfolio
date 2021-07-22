@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Modal, Form } from 'react-bootstrap';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from '../../../components/Button';
 
 const S = {
 	Wrapper: styled.div`
@@ -15,18 +15,19 @@ const S = {
 	`,
 	Header: styled.header`
 		width: 100%;
-		max-width: 1180px;
+		max-width: 767px;
 		margin: auto;
 		transition: all 0.2s ease-in-out;
 		height: ${(props) => (props.isScroll ? '70px' : '100px')};
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		justify-content: center;
 	`,
 	Logo: styled.span`
 		color: ${({ isScroll, theme }) => (isScroll ? theme.palette.black : theme.palette.primary)};
 		font-weight: 900;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		flex: 0 0 25%;
 		max-width: 25%;
 	`,
@@ -52,8 +53,6 @@ const S = {
 		justify-content: flex-end;
 	`
 };
-
-const NAVIGATION_ITEMS = [ 'Profile', 'Use Programming Language', 'Project', 'Contact us' ];
 
 const Header = (props) => {
 	const { firebase } = props;
@@ -104,31 +103,6 @@ const Header = (props) => {
 		<S.Wrapper isScroll={isScroll}>
 			<S.Header isScroll={isScroll}>
 				<S.Logo isScroll={isScroll}>Portfolio</S.Logo>
-				<S.Navigation>
-					{NAVIGATION_ITEMS.map((item, index) => (
-						<S.NavigationItem
-							key={item}
-							isScroll={isScroll}
-							onClick={() => {
-								window.scrollTo(index, 0);
-							}}
-						>
-							{item}
-						</S.NavigationItem>
-					))}
-				</S.Navigation>
-				<S.ButtonWrapper>
-					<Button
-						fill="solid"
-						type="button"
-						style={{ marginLeft: 'auto' }}
-						onClick={() => {
-							setIsQandA(true);
-						}}
-					>
-						Q&A
-					</Button>
-				</S.ButtonWrapper>
 			</S.Header>
 			<Modal show={isQandA} onHide={() => setIsQandA(false)}>
 				<Modal.Header closeButton>
