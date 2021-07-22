@@ -7,7 +7,7 @@ const S = {
 		width: 100%;
 		max-width: 767px;
 		margin: auto;
-		padding: 120px 30px;
+		padding: 120px 0px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -43,6 +43,7 @@ const S = {
 		background-color: ${(props) => props.theme.palette.white};
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.03);
 		border-radius: 0.5rem;
 	`,
@@ -52,6 +53,7 @@ const S = {
 		font-weight: 500;
 		color: ${(props) => props.theme.palette.black};
 		margin-bottom: 1rem;
+		line-height: 1.2rem;
 	`,
 	Number: styled.span`
 		${(props) => props.theme.typography.subtitle};
@@ -61,7 +63,7 @@ const S = {
 	`
 };
 
-const SERVICES_ITEMS = [ [ 'HTML', 'CSS', 'React' ], [ 'ReactNative', 'Node.js', 'JavaScript' ] ];
+const SERVICES_ITEMS = [ [ 'HTML', 'CSS', 'React' ], [ `React\nNative`, 'Node.js', 'Java\nScript' ] ];
 
 const Services = (props) => {
 	const animatedItem = {
