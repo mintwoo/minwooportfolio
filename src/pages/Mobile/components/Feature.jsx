@@ -63,7 +63,7 @@ const S = {
 	`,
 	Image: styled.div`
 		width: 100%;
-		height: 300px;
+		height: 50vw;
 		margin-bottom: 50px;
 		background: no-repeat center/cover
 			url(https://firebasestorage.googleapis.com/v0/b/portfolio-b7e94.appspot.com/o/profile.jpg?alt=media&token=5964cc18-9251-40b6-986c-36e3731b5143);

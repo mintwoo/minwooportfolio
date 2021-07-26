@@ -37,7 +37,7 @@ const S = {
 		margin-bottom: 20px;
 	`,
 	ItemBox: styled.li`
-		flex: 1;
+		width: 30vw;
 		padding: 3rem 2rem;
 		text-align: center;
 		background-color: ${(props) => props.theme.palette.white};

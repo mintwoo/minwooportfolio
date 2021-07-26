@@ -2,7 +2,8 @@ import React from 'react';
 import Firebase from './hooks/firebase';
 import { ThemeProvider } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import { GlobalStyle, theme } from './styles';
+import { GlobalStyle } from './styles';
+import { theme, theme2 } from './styles/theme';
 import { PC, Tablet, Mobile } from './pages';
 
 const firebase = new Firebase();
@@ -21,14 +22,14 @@ const App = () => {
 	});
 
 	React.useEffect(() => {
-		firebase.db.collection('DataBase').doc('db').onSnapshot((doc) => {
+		firebase.db.collection('DataBase').doc('db').get().then((doc) => {
 			setdata(doc.data());
 		});
-	});
+	}, []);
 
 	if (data != null)
 		return (
-			<ThemeProvider theme={theme}>
+			<ThemeProvider theme={isPc ? theme : theme2}>
 				<GlobalStyle />
 				{isPc && <PC firebase={firebase} data={data} />}
 				{isTablet && <Tablet firebase={firebase} data={data} />}

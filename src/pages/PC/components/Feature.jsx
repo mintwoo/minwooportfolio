@@ -103,7 +103,7 @@ const Feature = (props) => {
 					</S.Description>
 					<S.SubTitle>경력</S.SubTitle>
 					<S.List>
-						{FEAURE_ITEMS.map((item, index) => (
+						{data.profile.list.map((item, index) => (
 							<S.ListItem key={item}>
 								<span>•</span> {item}
 							</S.ListItem>

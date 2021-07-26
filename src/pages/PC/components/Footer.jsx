@@ -131,9 +131,6 @@ const Footer = () => {
 				>
 					React
 				</S.MenuItem>
-			</S.Menu>
-			<S.Menu>
-				<S.MenuTitle>.</S.MenuTitle>
 				<S.MenuItem
 					onClick={() => {
 						setIsQandA(true);
@@ -168,11 +165,64 @@ const Footer = () => {
 					JavaScript
 				</S.MenuItem>
 			</S.Menu>
+
 			<S.Menu>
 				<S.MenuTitle>Project</S.MenuTitle>
-				<S.MenuItem>단지유 어플</S.MenuItem>
-				<S.MenuItem>단지유 관리자 사이트</S.MenuItem>
-				<S.MenuItem>단지유 판매자 어플</S.MenuItem>
+				<S.MenuItem
+					onClick={() => {
+						setIsQandA(true);
+						setIsTitle({
+							title: '단지유 어플',
+							body: '아파트마다 공동구매 및 서비스가 추가된 쇼핑몰'
+						});
+					}}
+				>
+					단지유 어플
+				</S.MenuItem>
+				<S.MenuItem
+					onClick={() => {
+						setIsQandA(true);
+						setIsTitle({
+							title: '단지유 관리자 사이트',
+							body: '단지유 어플 배달 및 데이터 관리 페이지'
+						});
+					}}
+				>
+					단지유 관리자 사이트
+				</S.MenuItem>
+				<S.MenuItem
+					onClick={() => {
+						setIsQandA(true);
+						setIsTitle({
+							title: '단지유 판매자 어플',
+							body: '단지유 어플 배달 완료시 데이터 전송 및 상품 관리 어플'
+						});
+					}}
+				>
+					단지유 판매자 어플
+				</S.MenuItem>
+				<S.MenuItem
+					onClick={() => {
+						setIsQandA(true);
+						setIsTitle({
+							title: 'On Your Mark 어플',
+							body: '휴대폰 위치 기반으로 출근 및 퇴근 어플'
+						});
+					}}
+				>
+					On Your Mark 어플
+				</S.MenuItem>
+				<S.MenuItem
+					onClick={() => {
+						setIsQandA(true);
+						setIsTitle({
+							title: '단지유 사이트',
+							body: '단지유 소개 페이지'
+						});
+					}}
+				>
+					단지유 사이트
+				</S.MenuItem>
 			</S.Menu>
 			<S.Bottom>
 				<span>minwoo © 2021</span>
