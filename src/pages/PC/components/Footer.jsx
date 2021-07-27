@@ -172,19 +172,19 @@ const Footer = () => {
 					onClick={() => {
 						setIsQandA(true);
 						setIsTitle({
-							title: '단지유 어플',
+							title: '단지유 앱',
 							body: '아파트마다 공동구매 및 서비스가 추가된 쇼핑몰'
 						});
 					}}
 				>
-					단지유 어플
+					단지유 앱
 				</S.MenuItem>
 				<S.MenuItem
 					onClick={() => {
 						setIsQandA(true);
 						setIsTitle({
 							title: '단지유 관리자 사이트',
-							body: '단지유 어플 배달 및 데이터 관리 페이지'
+							body: '단지유 앱 배달 및 데이터 관리 페이지'
 						});
 					}}
 				>
@@ -194,23 +194,23 @@ const Footer = () => {
 					onClick={() => {
 						setIsQandA(true);
 						setIsTitle({
-							title: '단지유 판매자 어플',
-							body: '단지유 어플 배달 완료시 데이터 전송 및 상품 관리 어플'
+							title: '단지유 판매자 앱',
+							body: '단지유 앱 배달 완료시 데이터 전송 및 상품 관리 앱'
 						});
 					}}
 				>
-					단지유 판매자 어플
+					단지유 판매자 앱
 				</S.MenuItem>
 				<S.MenuItem
 					onClick={() => {
 						setIsQandA(true);
 						setIsTitle({
-							title: 'On Your Mark 어플',
-							body: '휴대폰 위치 기반으로 출근 및 퇴근 어플'
+							title: 'On Your Mark 앱',
+							body: '휴대폰 위치 기반으로 출근 및 퇴근 앱'
 						});
 					}}
 				>
-					On Your Mark 어플
+					On Your Mark 앱
 				</S.MenuItem>
 				<S.MenuItem
 					onClick={() => {

@@ -106,7 +106,7 @@ const WORKS_ITEMS = [
 		{
 			image:
 				'https://firebasestorage.googleapis.com/v0/b/portfolio-b7e94.appspot.com/o/AppFirstimage.jpg?alt=media&token=64a46314-60b4-4145-a454-70f5f29a973d',
-			title: '단지유 어플',
+			title: '단지유 앱',
 			label: '2020.04.26 ~',
 			label2: '혼자 개발',
 			description: '아파트마다 공동구매 및 서비스가 추가된 쇼핑몰',
@@ -123,16 +123,16 @@ const WORKS_ITEMS = [
 			title: '단지유 관리자 사이트',
 			label: '2020.04.26 ~',
 			label2: '혼자 개발',
-			description: '단지유 어플 배달 및 데이터 관리 페이지',
+			description: '단지유 앱 배달 및 데이터 관리 페이지',
 			memo: [ 'react 기반 개발', 'firebase DB 사용(실시간 데이터 변동 적용)', 'Docker 사용 경험' ]
 		},
 		{
 			image:
 				'https://firebasestorage.googleapis.com/v0/b/portfolio-b7e94.appspot.com/o/sellerpage.jpg?alt=media&token=0449c9c0-e1a0-4a43-99ab-84060ea7379b',
-			title: '단지유 판매자 어플',
+			title: '단지유 판매자 앱',
 			label: '2021.06.01 ~',
 			label2: '혼자 개발',
-			description: '단지유 어플 배달 완료시 데이터 전송 및 상품 관리 어플',
+			description: '단지유 앱 배달 완료시 데이터 전송 및 상품 관리 앱',
 			memo: [
 				'react native 기반 개발',
 				'firebase DB 사용(실시간 데이터 변동 적용)',
@@ -145,10 +145,10 @@ const WORKS_ITEMS = [
 		{
 			image:
 				'https://firebasestorage.googleapis.com/v0/b/portfolio-b7e94.appspot.com/o/onyourmark.jpg?alt=media&token=5d871fe7-b507-44e7-b5a9-1674e3e65a9b',
-			title: 'On Your Mark 어플',
+			title: 'On Your Mark 앱',
 			label: '2021.01.26 ~ ',
 			label2: '혼자 개발',
-			description: '휴대폰 위치 기반으로 출근 및 퇴근 어플',
+			description: '휴대폰 위치 기반으로 출근 및 퇴근 앱',
 			memo: [
 				'react native 기반 개발',
 				'firebase DB 사용(실시간 데이터 변동 적용)',

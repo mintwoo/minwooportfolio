@@ -104,9 +104,9 @@ const Footer = () => (
 		</S.Menu>
 		<S.Menu>
 			<S.MenuTitle>Project</S.MenuTitle>
-			<S.MenuItem>단지유 어플</S.MenuItem>
+			<S.MenuItem>단지유 앱</S.MenuItem>
 			<S.MenuItem>단지유 관리자 사이트</S.MenuItem>
-			<S.MenuItem>단지유 판매자 어플</S.MenuItem>
+			<S.MenuItem>단지유 판매자 앱</S.MenuItem>
 		</S.Menu>
 		<S.Bottom>
 			<span>minwoo © 2021</span>
