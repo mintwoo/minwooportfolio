@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/minwooportfolio/static/js/main.a76961fb.chunk.js",
+    "main.js.map": "/minwooportfolio/static/js/main.a76961fb.chunk.js.map",
+    "runtime-main.js": "/minwooportfolio/static/js/runtime-main.cbb8d6f6.js",
+    "runtime-main.js.map": "/minwooportfolio/static/js/runtime-main.cbb8d6f6.js.map",
+    "static/js/2.eb541398.chunk.js": "/minwooportfolio/static/js/2.eb541398.chunk.js",
+    "static/js/2.eb541398.chunk.js.map": "/minwooportfolio/static/js/2.eb541398.chunk.js.map",
+    "index.html": "/minwooportfolio/index.html",
+    "static/js/2.eb541398.chunk.js.LICENSE.txt": "/minwooportfolio/static/js/2.eb541398.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cbb8d6f6.js",
+    "static/js/2.eb541398.chunk.js",
+    "static/js/main.a76961fb.chunk.js"
+  ]
+}
